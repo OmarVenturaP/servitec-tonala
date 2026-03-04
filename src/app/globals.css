@@ -1,26 +1,55 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-servitec-cyan: #4cfdfd;
+  --color-servitec-dark: #00040f; /* Actualizado a tu azul medianoche */
+  --color-servitec-card: rgba(255, 255, 255, 0.08);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-servitec-dark);
+  color: #ffffff;
+  overflow-x: hidden;
+  /* Suaviza el renderizado de las fuentes */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Efecto de resplandor de fondo */
+.bg-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(1, 65, 255, 0.15), transparent 60%);
+}
+
+/* --- SCROLLBAR PREMIUM --- */
+/* Personaliza la barra lateral del navegador para que combine con la web */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #00040f; 
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(76, 253, 253, 0.2); /* Cian transparente */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(76, 253, 253, 0.6); /* Se ilumina al pasar el mouse */
+}
+
+@layer utilities {
+  /* Scroll infinito optimizado matemáticamente */
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    /* Al usar -33.33% el loop es perfecto sin importar el tamaño de la pantalla */
+    100% { transform: translateX(-33.33%); } 
+  }
+
+  .animate-infinite-scroll {
+    /* Si sientes que va muy rápido, cambia los 30s por 40s o 50s */
+    animation: scroll 30s linear infinite;
+  }
+  
+  .animate-infinite-scroll:hover {
+    animation-play-state: paused; 
+  }
 }
