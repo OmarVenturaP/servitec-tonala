@@ -1,6 +1,10 @@
 import Navbar from "../components/Navbar";
 import DataProjects from "./DataProjects";
-import Footer from "../components/Footer";
+
+export const metadata = {
+  title: 'Proyectos | SERVITEC',
+  description: 'Descubre nuestros proyectos de desarrollo web y seguridad electrónica que están transformando a nuestros clientes.',
+};
 
 export default function ProyectosPage() {
   return (

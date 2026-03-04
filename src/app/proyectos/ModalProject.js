@@ -45,6 +45,11 @@ export default function ModalProject({ show, onHide, project }) {
 
         {/* Footer (Botones) */}
         <div className="flex justify-center gap-4 p-6 border-t border-white/10 bg-white/5">
+        {project.url_demo == "proximamente" ? (
+            <span className="flex items-center gap-2 px-6 py-3 bg-gray-600 text-white font-bold rounded-xl cursor-not-allowed">
+              <span>🚧</span> Próximamente
+            </span>
+          ) : (   
           <a 
             href={project.url_demo} 
             target="_blank" 
@@ -53,6 +58,7 @@ export default function ModalProject({ show, onHide, project }) {
           >
             <span>🚀</span> Visitar
           </a>
+          )}
           {/* 
             <a 
             href={project.url_repo} 

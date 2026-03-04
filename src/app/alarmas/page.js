@@ -1,6 +1,11 @@
 import Navbar from "../components/Navbar";
 import AlarmasGrid from "./AlarmasGrid";
 
+export const metadata = {
+  title: 'Alarmas | SERVITEC',
+  description: 'Protege tu hogar o negocio con nuestras soluciones de alarmas inteligentes. Sistemas de seguridad avanzados, monitoreo 24/7 y tecnología de punta para tu tranquilidad.',
+};
+
 export default function AlarmasPage() {
   return (
     <main className="min-h-screen bg-[#00040f] text-white relative overflow-hidden">

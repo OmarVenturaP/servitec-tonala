@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 export default function ContactoPage() {
   const [formData, setFormData] = useState({
@@ -165,7 +164,6 @@ export default function ContactoPage() {
         </div>
       </div>
 
-      <Footer />
     </main>
   );
 }

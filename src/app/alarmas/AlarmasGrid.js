@@ -4,46 +4,46 @@ import Link from "next/link";
 export default function AlarmasGrid() {
   const paquetes = [
     {
-      nombre: "KIT RESIDENCIAL",
+      nombre: "KIT BASICO",
       precio: "$4,500", // Precios de ejemplo, ajústalos a tu catálogo
       descripcion: "Protección esencial para casas y departamentos pequeños.",
-      imagen: "https://res.cloudinary.com/dzgqpqv9f/image/upload/v1739504281/Sistemas-de-alarma_dz7ar6.jpg", // Cambia esto por la foto de tu panel de alarma
+      imagen: "https://res.cloudinary.com/dzgqpqv9f/image/upload/v1737152559/Alarmas_inalambricas_fewmwy.png", // Cambia esto por la foto de tu panel de alarma
       caracteristicas: [
         "1 Panel de Control con sirena",
-        "2 Sensores de movimiento (PIR)",
-        "2 Contactos magnéticos (puertas/ventanas)",
-        "2 Controles remotos",
+        "1 Sensor de movimiento (PIR)",
+        "1 Contacto magnético (puertas/ventanas)",
+        "1 Control remoto",
         "Batería de respaldo"
       ],
       recomendado: false
     },
     {
-      nombre: "SMART SECURITY",
-      precio: "$7,200",
+      nombre: "KIT DAHUA",
+      precio: "$4,490",
       descripcion: "El sistema más completo con control total desde tu celular.",
-      imagen: "https://res.cloudinary.com/dzgqpqv9f/image/upload/v1739504281/Sistemas-de-alarma_dz7ar6.jpg",
+      imagen: "https://res.cloudinary.com/dzgqpqv9f/image/upload/v1739497309/ART-ARC3000H-03-W2-scaled_qzmqto.jpg",
       caracteristicas: [
         "Panel inteligente Wi-Fi / GSM",
-        "4 Sensores de movimiento",
-        "4 Contactos magnéticos",
+        "1 Sensor de movimiento",
+        "1 Contacto magnético",
         "Control total por App (iOS/Android)",
         "Avisos instantáneos al celular"
       ],
-      recomendado: true // El paquete estrella
+      recomendado: false // El paquete estrella
     },
     {
-      nombre: "PROTECCIÓN TOTAL",
-      precio: "$11,500",
+      nombre: "KIT HIKVISION",
+      precio: "$5,990",
       descripcion: "Seguridad de grado comercial para negocios y bodegas.",
-      imagen: "https://res.cloudinary.com/dzgqpqv9f/image/upload/v1739504281/Sistemas-de-alarma_dz7ar6.jpg",
+      imagen: "https://res.cloudinary.com/dzgqpqv9f/image/upload/v1739497308/HK-DS-PWA64-KIT-WB-scaled_blmp8j.jpg",
       caracteristicas: [
         "Panel Híbrido de alta capacidad",
-        "Sensores de doble tecnología",
+        "Sensor de doble tecnología",
         "Contactos de uso rudo",
         "Sirena exterior tipo banco con estrobo",
-        "Integración con cámaras (opcional)"
+        "Avisos instantáneos al celular"
       ],
-      recomendado: false
+      recomendado: true
     }
   ];
 

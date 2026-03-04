@@ -1,10 +1,14 @@
 import Navbar from "../components/Navbar";
 import HerramientasGrid from "./HerramientasGrid";
-import DataProjects from "../proyectos/DataProjects"; // Importamos el portafolio que ya conectamos a MySQL
-import Footer from "../components/Footer";
+import DataProjects from "../proyectos/DataProjects";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faCircleInfo, faGlobe, faCode, faMobileScreen } from "@fortawesome/free-solid-svg-icons";
+
+export const metadata = {
+  title: 'Desarrollo Web | SERVITEC',
+  description: 'Creamos plataformas digitales, e-commerce y sistemas web ultrarrápidos y optimizados para hacer crecer tu negocio.',
+};
 
 const productos = [
   {

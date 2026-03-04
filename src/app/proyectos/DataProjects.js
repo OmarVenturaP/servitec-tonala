@@ -97,9 +97,9 @@ export default function DataProjects() {
                   <h3 className="text-xl font-bold text-white group-hover:text-[var(--color-servitec-cyan)] transition-colors">
                     {project.nombre}
                   </h3>
-                  <span className="inline-block mt-4 px-4 py-2 rounded-full border border-[var(--color-servitec-cyan)]/30 text-[var(--color-servitec-cyan)] text-xs uppercase tracking-widest font-bold group-hover:bg-[var(--color-servitec-cyan)] group-hover:text-black transition-all">
-                    Ver Detalles
-                  </span>
+                    <span className="inline-block mt-4 px-4 py-2 rounded-full border border-[var(--color-servitec-cyan)]/30 text-[var(--color-servitec-cyan)] text-xs uppercase tracking-widest font-bold group-hover:bg-[var(--color-servitec-cyan)] group-hover:text-black transition-all">
+                      Ver Detalles
+                    </span>
                 </div>
               </div>
             ))}

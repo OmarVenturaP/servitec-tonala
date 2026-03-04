@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 
 export default function HomePage() {
   return (
@@ -14,7 +13,7 @@ export default function HomePage() {
       {/* 1. SECCIÓN HERO (El primer impacto) */}
       <section className="relative pt-40 pb-20 px-6 z-10 min-h-[80vh] flex flex-col justify-center items-center text-center">
         <div className="inline-block mb-6 px-6 py-2 rounded-full border border-[var(--color-servitec-cyan)]/30 bg-[var(--color-servitec-cyan)]/10 text-[var(--color-servitec-cyan)] text-xs md:text-sm font-bold tracking-[0.3em] uppercase backdrop-blur-md">
-          TECNOLOGÍA Y SEGURIDAD EN TONALÁ
+          TECNOLOGÍA Y SEGURIDAD
         </div>
         
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white mb-8 leading-tight">

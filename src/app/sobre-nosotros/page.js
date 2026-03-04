@@ -1,5 +1,9 @@
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+
+export const metadata = {
+  title: 'Sobre Nosotros | SERVITEC',
+  description: 'Descubre quiénes somos, nuestra historia y los valores que nos guían en el desarrollo de soluciones tecnológicas y de seguridad.'
+};
 
 export default function SobreNosotrosPage() {
   const valores = [
@@ -38,7 +42,7 @@ export default function SobreNosotrosPage() {
         {/* Encabezado Principal */}
         <div className="text-center mb-24">
           <p className="text-[var(--color-servitec-cyan)] font-bold uppercase tracking-[0.3em] text-sm mb-4">
-            CONOCE A SERVITEC
+            CONOCENOS
           </p>
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white mb-6">
             TECNOLOGÍA QUE <span className="text-[var(--color-servitec-cyan)]">PROTEGE Y CONECTA</span>
