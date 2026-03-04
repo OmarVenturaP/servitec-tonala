@@ -1,19 +1,29 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation'; // <-- Importamos usePathname
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname(); // <-- Obtenemos la ruta actual (ej: "/", "/seguridad")
+  const pathname = usePathname();
 
-  // Función auxiliar para saber qué color darle al enlace
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isOpen) {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isOpen]);
+
   const getLinkClass = (path) => {
-    // Si la ruta actual coincide con el path del enlace, lo pintamos de cian
     if (pathname === path) {
       return "text-[var(--color-servitec-cyan)] font-black drop-shadow-[0_0_8px_rgba(76,253,253,0.5)]";
     }
-    // Si no, lo dejamos gris/blanco con efecto hover
     return "text-gray-300 hover:text-[var(--color-servitec-cyan)] font-bold";
   };
 
@@ -53,8 +63,9 @@ export default function Navbar() {
           <Link href="/contacto" className={getLinkClass('/contacto')}>Contacto</Link>
         </div>
 
+        {/* Botón de Hamburguesa con animación sutil */}
         <button 
-          className="lg:hidden text-white p-2"
+          className="lg:hidden text-white p-2 transform transition-transform duration-300 hover:scale-110 active:scale-95"
           onClick={() => setIsOpen(!isOpen)}
         >
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,16 +74,21 @@ export default function Navbar() {
         </button>
       </div>
 
-      {isOpen && (
-        <div className="lg:hidden absolute top-24 left-0 w-full bg-[#00040f]/95 backdrop-blur-xl border-b border-white/10 flex flex-col items-center py-6 gap-6 uppercase tracking-widest text-sm">
-          <Link href="/" onClick={() => setIsOpen(false)} className={getMobileLinkClass('/')}>Inicio</Link>
-          <Link href="/desarrollo" onClick={() => setIsOpen(false)} className={getMobileLinkClass('/desarrollo')}>Desarrollo</Link>
-          <Link href="/seguridad" onClick={() => setIsOpen(false)} className={getMobileLinkClass('/seguridad')}>Seguridad</Link>
-          <Link href="/proyectos" onClick={() => setIsOpen(false)} className={getMobileLinkClass('/proyectos')}>Portfolio</Link>
-          <Link href="/sobre-nosotros" onClick={() => setIsOpen(false)} className={getMobileLinkClass('/sobre-nosotros')}>Nosotros</Link>
-          <Link href="/contacto" onClick={() => setIsOpen(false)} className={getMobileLinkClass('/contacto')}>Contacto</Link>
-        </div>
-      )}
+      {/* Menú Mobile Desplegable con Transición CSS Fluida */}
+      <div 
+        className={`lg:hidden absolute top-24 left-0 w-full bg-[#00040f]/95 backdrop-blur-xl border-b border-white/10 flex flex-col items-center gap-6 uppercase tracking-widest text-sm transition-all duration-500 ease-in-out overflow-hidden origin-top ${
+          isOpen 
+            ? "max-h-[500px] py-8 opacity-100 translate-y-0 pointer-events-auto" 
+            : "max-h-0 py-0 opacity-0 -translate-y-4 pointer-events-none border-transparent"
+        }`}
+      >
+        <Link href="/" onClick={() => setIsOpen(false)} className={getMobileLinkClass('/')}>Inicio</Link>
+        <Link href="/desarrollo" onClick={() => setIsOpen(false)} className={getMobileLinkClass('/desarrollo')}>Desarrollo</Link>
+        <Link href="/seguridad" onClick={() => setIsOpen(false)} className={getMobileLinkClass('/seguridad')}>Seguridad</Link>
+        <Link href="/proyectos" onClick={() => setIsOpen(false)} className={getMobileLinkClass('/proyectos')}>Portfolio</Link>
+        <Link href="/sobre-nosotros" onClick={() => setIsOpen(false)} className={getMobileLinkClass('/sobre-nosotros')}>Nosotros</Link>
+        <Link href="/contacto" onClick={() => setIsOpen(false)} className={getMobileLinkClass('/contacto')}>Contacto</Link>
+      </div>
     </nav>
   );
 }
