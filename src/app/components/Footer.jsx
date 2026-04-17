@@ -26,7 +26,7 @@ export default function Footer() {
             </Link>
             {/* Esta descripción se oculta en móvil para ahorrar espacio */}
             <p className="text-gray-400 text-sm leading-relaxed max-w-sm hidden md:block">
-              Soluciones tecnológicas integrales. Desarrollo web moderno y sistemas de seguridad electrónica de alta gama para proteger y potenciar tu negocio en Tonalá y alrededores.
+              Soluciones tecnológicas de alto impacto. Desarrollo web moderno, tiendas virtuales e interfaces a la medida para potenciar tu negocio en el mundo digital.
             </p>
           </div>
 
@@ -37,24 +37,23 @@ export default function Footer() {
             </h4>
             <ul className="space-y-4 text-center md:text-left text-sm">
               <li>
-                <Link href="/desarrollo" className="text-gray-400 hover:text-[var(--color-servitec-cyan)] transition-colors">
+                <Link href="/contacto" className="text-gray-400 hover:text-[var(--color-servitec-cyan)] transition-colors">
                   Desarrollo Web
                 </Link>
               </li>
               <li>
-                <Link href="/seguridad" className="text-gray-400 hover:text-[var(--color-servitec-cyan)] transition-colors">
-                  Sistemas de Seguridad
+                <Link href="/contacto" className="text-gray-400 hover:text-[var(--color-servitec-cyan)] transition-colors">
+                  E-Commerce
                 </Link>
               </li>
-              {/* Estos sub-enlaces se ocultan en móvil */}
-              <li className="hidden md:block">
-                <Link href="/camaras" className="text-gray-500 hover:text-[var(--color-servitec-cyan)] transition-colors">
-                  — Cámaras (CCTV)
+              <li>
+                <Link href="/contacto" className="text-gray-500 hover:text-[var(--color-servitec-cyan)] transition-colors">
+                  Software a la medida
                 </Link>
               </li>
-              <li className="hidden md:block">
-                <Link href="/alarmas" className="text-gray-500 hover:text-[var(--color-servitec-cyan)] transition-colors">
-                  — Alarmas
+              <li>
+                <Link href="/contacto" className="text-gray-500 hover:text-[var(--color-servitec-cyan)] transition-colors">
+                  Diseño UI/UX
                 </Link>
               </li>
             </ul>

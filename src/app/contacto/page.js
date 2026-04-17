@@ -43,7 +43,7 @@ export default function ContactoPage() {
             CONTÁCTA<span className="text-[var(--color-servitec-cyan)]">NOS</span>
           </h1>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            ¿Tienes un proyecto en mente o necesitas mejorar tu seguridad? Escríbenos y te asesoraremos sin compromiso.
+            ¿Tienes un proyecto en mente? Escríbenos y te asesoraremos sin compromiso.
           </p>
         </div>
 
@@ -124,10 +124,10 @@ export default function ContactoPage() {
                   onChange={handleChange}
                   className="w-full bg-white/5 border border-white/10 text-white rounded-xl px-4 py-3 focus:outline-none focus:border-[var(--color-servitec-cyan)] focus:bg-white/10 transition-all appearance-none cursor-pointer"
                 >
-                  <option value="Desarrollo Web" className="bg-[#000814] text-white">Desarrollo Web (Páginas, Tiendas)</option>
-                  <option value="Cámaras de Seguridad" className="bg-[#000814] text-white">Cámaras de Seguridad (CCTV)</option>
-                  <option value="Sistemas de Alarmas" className="bg-[#000814] text-white">Sistemas de Alarmas</option>
-                  <option value="Otro Servicio" className="bg-[#000814] text-white">Otro (Mantenimiento, Redes, etc.)</option>
+                  <option value="Desarrollo Web" className="bg-[#000814] text-white">Desarrollo Web (Páginas Institucionales)</option>
+                  <option value="E-Commerce" className="bg-[#000814] text-white">E-Commerce / Tienda Virtual</option>
+                  <option value="Software a la Medida" className="bg-[#000814] text-white">Software SaaS / CRM a la medida</option>
+                  <option value="Otro Servicio" className="bg-[#000814] text-white">Otro (Mantenimiento, UI/UX, etc.)</option>
                 </select>
               </div>
 

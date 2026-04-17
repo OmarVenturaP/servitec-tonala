@@ -2,11 +2,11 @@ import React from "react";
 
 export default function Marcas() {
   const brands = [
-    { name: "Interfono", src: "https://res.cloudinary.com/dzgqpqv9f/image/upload/v1739579513/interfono__1_-removebg-preview_tqwgen.png" },
-    { name: "CALEPC10", src: "https://res.cloudinary.com/dzgqpqv9f/image/upload/v1739579335/CALEPC10-h_lxntfb.webp" },
-    { name: "Dahua", src: "https://res.cloudinary.com/dzgqpqv9f/image/upload/v1739579335/Dahua-Logo-01_wlos8p.png" },
-    { name: "HiLook", src: "https://res.cloudinary.com/dzgqpqv9f/image/upload/v1739579335/HiLook-logo_uz7ayd.webp" },
-    { name: "Ezviz", src: "https://res.cloudinary.com/dzgqpqv9f/image/upload/v1739579514/ezviz-logo-png_seeklogo-340396-removebg-preview_fyxfgl.png" }
+    { name: "React", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+    { name: "Next.js", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
+    { name: "Node.js", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
+    { name: "Tailwind CSS", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+    { name: "Vercel", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" }
   ];
 
   // Duplicamos los logos para el scroll infinito

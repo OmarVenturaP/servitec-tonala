@@ -57,10 +57,15 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-8 text-sm uppercase tracking-widest transition-colors">
           <Link href="/" className={getLinkClass('/')}>Inicio</Link>
           <Link href="/desarrollo" className={getLinkClass('/desarrollo')}>Desarrollo</Link>
-          <Link href="/seguridad" className={getLinkClass('/seguridad')}>Seguridad</Link>
           <Link href="/proyectos" className={getLinkClass('/proyectos')}>Portfolio</Link>
           <Link href="/sobre-nosotros" className={getLinkClass('/sobre-nosotros')}>Nosotros</Link>
           <Link href="/contacto" className={getLinkClass('/contacto')}>Contacto</Link>
+          <Link 
+            href="/contacto" 
+            className="px-6 py-2 ml-4 border border-[var(--color-servitec-cyan)] text-[var(--color-servitec-cyan)] font-bold rounded-full hover:bg-[var(--color-servitec-cyan)] hover:text-black transition-all shadow-[0_0_10px_rgba(76,253,253,0.2)] hover:shadow-[0_0_20px_rgba(76,253,253,0.6)]"
+          >
+            Cotizar Proyecto
+          </Link>
         </div>
 
         {/* Botón de Hamburguesa con animación sutil */}
@@ -84,10 +89,16 @@ export default function Navbar() {
       >
         <Link href="/" onClick={() => setIsOpen(false)} className={getMobileLinkClass('/')}>Inicio</Link>
         <Link href="/desarrollo" onClick={() => setIsOpen(false)} className={getMobileLinkClass('/desarrollo')}>Desarrollo</Link>
-        <Link href="/seguridad" onClick={() => setIsOpen(false)} className={getMobileLinkClass('/seguridad')}>Seguridad</Link>
         <Link href="/proyectos" onClick={() => setIsOpen(false)} className={getMobileLinkClass('/proyectos')}>Portfolio</Link>
         <Link href="/sobre-nosotros" onClick={() => setIsOpen(false)} className={getMobileLinkClass('/sobre-nosotros')}>Nosotros</Link>
         <Link href="/contacto" onClick={() => setIsOpen(false)} className={getMobileLinkClass('/contacto')}>Contacto</Link>
+        <Link 
+          href="/contacto" 
+          onClick={() => setIsOpen(false)} 
+          className="mt-2 px-8 py-3 bg-[var(--color-servitec-cyan)] text-black font-black rounded-full hover:scale-105 transition-transform shadow-[0_0_15px_rgba(76,253,253,0.4)]"
+        >
+          Cotizar Proyecto
+        </Link>
       </div>
     </nav>
   );

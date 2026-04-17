@@ -2,29 +2,29 @@ import Navbar from "../components/Navbar";
 
 export const metadata = {
   title: 'Sobre Nosotros | SERVITEC',
-  description: 'Descubre quiénes somos, nuestra historia y los valores que nos guían en el desarrollo de soluciones tecnológicas y de seguridad.'
+  description: 'Descubre quiénes somos, nuestra historia y los valores que nos guían en el desarrollo de software y soluciones tecnológicas.'
 };
 
 export default function SobreNosotrosPage() {
   const valores = [
     {
       titulo: "Innovación",
-      descripcion: "Nos mantenemos a la vanguardia tecnológica para ofrecerte las soluciones web y de seguridad más modernas del mercado.",
+      descripcion: "Nos mantenemos a la vanguardia tecnológica utilizando los frameworks y lenguajes más modernos del mercado (Next.js, React, Node).",
       icono: "💡"
     },
     {
-      titulo: "Confianza",
-      descripcion: "Tu seguridad y tus datos son nuestra prioridad. Trabajamos con total transparencia y ética profesional.",
-      icono: "🤝"
+      titulo: "Código Limpio",
+      descripcion: "Nuestra prioridad es la arquitectura escalable y el rendimiento excepcional. Escribimos código mantenible y seguro.",
+      icono: "💻"
     },
     {
-      titulo: "Calidad",
-      descripcion: "Desde el código que escribimos hasta las cámaras que instalamos, utilizamos estándares de primer nivel.",
+      titulo: "Calidad Visual",
+      descripcion: "Diseñamos interfaces de usuario (UI/UX) que no solo se ven increíbles, sino que convierten visitantes en clientes.",
       icono: "⭐"
     },
     {
       titulo: "Cercanía",
-      descripcion: "Soporte técnico real y atención personalizada en Tonalá y alrededores. No te dejamos solo después de la venta.",
+      descripcion: "Soporte técnico real y atención personalizada en Tonalá y alrededores. Te acompañamos en toda tu transformación digital.",
       icono: "📍"
     }
   ];
@@ -45,12 +45,12 @@ export default function SobreNosotrosPage() {
             CONOCENOS
           </p>
           <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white mb-6">
-            TECNOLOGÍA QUE <span className="text-[var(--color-servitec-cyan)]">PROTEGE Y CONECTA</span>
+            TECNOLOGÍA QUE <span className="text-[var(--color-servitec-cyan)]">IMPULSA TU NEGOCIO</span>
           </h1>
           <p className="text-lg text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Somos una empresa orgullosamente establecida en Tonalá, Chiapas, especializada en llevar 
-            soluciones digitales y de seguridad electrónica al siguiente nivel. Transformamos la manera 
-            en que proteges tu entorno y proyectas tu negocio en internet.
+            Somos una agencia de desarrollo de software orgullosamente establecida en Tonalá, Chiapas. 
+            Nos especializamos en llevar la presencia digital de las empresas al siguiente nivel mediante 
+            plataformas web de alto rendimiento, e-commerce y sistemas a la medida.
           </p>
         </div>
 
@@ -63,9 +63,9 @@ export default function SobreNosotrosPage() {
               Nuestra <span className="text-[var(--color-servitec-cyan)]">Misión</span>
             </h2>
             <p className="text-gray-300 leading-relaxed text-lg">
-              Proveer soluciones tecnológicas integrales, desarrollando plataformas web de alto impacto 
-              e instalando sistemas de seguridad de vanguardia que garanticen la tranquilidad y el 
-              crecimiento de nuestros clientes, respaldados por un servicio técnico excepcional.
+              Proveer soluciones de software robustas y escalables, desarrollando plataformas web de alto impacto 
+              visual y técnico que garanticen el crecimiento y la digitalización de nuestros clientes, respaldados 
+              siempre por un servicio de ingeniería excepcional.
             </p>
           </div>
 
@@ -76,9 +76,9 @@ export default function SobreNosotrosPage() {
               Nuestra <span className="text-blue-400">Visión</span>
             </h2>
             <p className="text-gray-300 leading-relaxed text-lg">
-              Consolidarnos como la empresa líder en tecnología y seguridad electrónica en Chiapas, 
-              reconocidos por nuestra innovación, la calidad inquebrantable de nuestros proyectos 
-              y el compromiso absoluto con el éxito y la protección de cada usuario que confía en nosotros.
+              Consolidarnos como la principal agencia de desarrollo web y tecnología en la región, 
+              reconocidos por nuestra innovación, la calidad inquebrantable de nuestro código 
+              y el compromiso absoluto con el éxito digital de cada proyecto que impulsamos.
             </p>
           </div>
         </div>

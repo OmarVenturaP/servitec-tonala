@@ -1,101 +1,153 @@
-import Navbar from "../components/Navbar";
-import HerramientasGrid from "./HerramientasGrid";
-import DataProjects from "../proyectos/DataProjects";
 import Link from "next/link";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faCircleInfo, faGlobe, faCode, faMobileScreen } from "@fortawesome/free-solid-svg-icons";
+import Navbar from "../components/Navbar";
 
 export const metadata = {
-  title: 'Desarrollo Web | SERVITEC',
-  description: 'Creamos plataformas digitales, e-commerce y sistemas web ultrarrápidos y optimizados para hacer crecer tu negocio.',
+  title: 'Desarrollo Web & Software | SERVITEC',
+  description: 'Conoce nuestras soluciones en desarrollo de software: Landing Pages, Tiendas Virtuales, Web Apps y plataformas SaaS a la medida.',
 };
 
-const productos = [
-  {
-    titulo: "Página Web estática",
-    img: "https://res.cloudinary.com/dzgqpqv9f/image/upload/v1701463252/page_gjdcsa.png",
-    desc: "Si eres un emprendedor, profesionista o simplemente quieres promocionar una marca o evento, esta opción es para ti. Genera confianza y atrae más clientes.",
-    link: "https://wa.link/smhv4t"
-  },
-  {
-    titulo: "Sitio Web",
-    img: "https://res.cloudinary.com/dzgqpqv9f/image/upload/v1701463252/sitio_bofndf.png",
-    desc: "Permite mostrar los diferentes productos y soluciones con los que cuentas, todo al alcance de un click, para crear una experiencia única entre los usuarios.",
-    link: "https://wa.link/smhv4t"
-  },
-  {
-    titulo: "Aplicación Web",
-    img: "https://res.cloudinary.com/dzgqpqv9f/image/upload/v1701463250/app-web_udv55m.png",
-    desc: "Disfruta de mayores herramientas: gestión de usuarios, pedidos automáticos y generación de campañas publicitarias, además de integrar tickets y comandas.",
-    link: "https://wa.link/smhv4t"
-  }
-];
+export default function DesarrolloPage() {
+  const servicios = [
+    {
+      id: "landing-pages",
+      icono: "🚀",
+      titulo: "Landing Pages",
+      subtitulo: "Conversión de alto impacto",
+      descripcion: "Páginas de un solo objetivo, súper rápidas y diseñadas estratégicamente para maximizar tus ventas y captación de clientes potenciales con excelente posicionamiento SEO.",
+      tecnologias: ["Next.js", "Tailwind CSS", "Framer Motion"],
+      color: "var(--color-servitec-cyan)",
+      colorClass: "text-[var(--color-servitec-cyan)]",
+      bgClass: "from-[var(--color-servitec-cyan)]/10"
+    },
+    {
+      id: "ecommerce",
+      icono: "🛒",
+      titulo: "E-Commerce",
+      subtitulo: "Tu tienda abierta 24/7",
+      descripcion: "Tiendas en línea robustas, seguras y autogestionables. Integramos pasarelas de pago, control total de tu inventario y experiencias de compra sin fricciones para tus usuarios.",
+      tecnologias: ["React", "Stripe / PayPal", "Node.js"],
+      color: "#a855f7", // purple-500
+      colorClass: "text-purple-400",
+      bgClass: "from-purple-500/10"
+    },
+    {
+      id: "web-apps",
+      icono: "📱",
+      titulo: "Progressive Web Apps",
+      subtitulo: "Experiencia nativa en la web",
+      descripcion: "Aplicaciones accesibles desde cualquier navegador o dispositivo, con tiempos de carga instantáneos e interfaces fluidas, sin necesidad de instalación desde tiendas.",
+      tecnologias: ["React", "PWA", "Firebase"],
+      color: "#ec4899", // pink-500
+      colorClass: "text-pink-400",
+      bgClass: "from-pink-500/10"
+    },
+    {
+      id: "saas",
+      icono: "⚙️",
+      titulo: "Software SaaS & CRM",
+      subtitulo: "Infraestructuras que escalan",
+      descripcion: "Sistemas administrativos personalizados, bases de datos complejas y automatización de procesos internos para gobernar los datos y las reglas vitales de tu empresa.",
+      tecnologias: ["Next.js", "MySQL", "Vercel"],
+      color: "#3b82f6", // blue-500
+      colorClass: "text-blue-400",
+      bgClass: "from-blue-500/10"
+    }
+  ];
 
-export default function DesarrolloWebPage() {
   return (
     <main className="min-h-screen bg-[#00040f] text-white relative overflow-hidden">
       <Navbar />
-      
-      {/* Luces de atmósfera de fondo */}
-      <div className="absolute top-[10%] left-[5%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[150px] pointer-events-none"></div>
-      <div className="absolute top-[50%] right-[0%] w-[400px] h-[400px] bg-[var(--color-servitec-cyan)]/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-      {/* Hero de Desarrollo Web */}
-      <div className="pt-40 pb-10 px-6 text-center relative z-10">
-        <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white mb-6">
-          DESARROLLO <span className="text-[var(--color-servitec-cyan)]">WEB</span>
-        </h1>
-        <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          Transformamos tus ideas en plataformas digitales de alto impacto. 
-          Diseño a medida, tiendas virtuales y sistemas web optimizados para hacer crecer tu negocio.
-        </p>
-      </div>
+      {/* Luces de Atmósfera */}
+      <div className="absolute top-[10%] left-[-10%] w-[600px] h-[600px] bg-[var(--color-servitec-cyan)]/10 rounded-full blur-[150px] pointer-events-none"></div>
+      <div className="absolute top-[60%] right-[-10%] w-[500px] h-[500px] bg-blue-700/10 rounded-full blur-[150px] pointer-events-none"></div>
 
-      {/* Sección 1: Tecnologías */}
-      <HerramientasGrid />
-
-      {/* Sección 2: El Portafolio (Vista Previa con Efecto Difuminado) */}
-      <div className="max-w-7xl mx-auto px-6 relative py-10 bg-gradient-to-b from-transparent to-[#000814]">
-        
-        {/* Contenedor que recorta la altura para mostrar solo 1 línea y media */}
-        <div className="relative max-h-[850px] overflow-hidden">
-          <DataProjects />
-          
-          {/* Capa de difuminado (Fade-out) y Botón */}
-          <div className="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-t from-[#000814] via-[#000814]/90 to-transparent flex items-end justify-center pb-8 z-20">
-            <Link 
-              href="/proyectos" 
-              className="group flex items-center gap-3 px-8 py-4 bg-[var(--color-servitec-cyan)] text-black font-black uppercase tracking-widest rounded-2xl hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_0_30px_rgba(76,253,253,0.3)]"
-            >
-              Ver todos los proyectos
-              <svg 
-                className="w-6 h-6 transform group-hover:translate-x-2 transition-transform" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </Link>
-          </div>
+      {/* Hero Section */}
+      <section className="relative pt-40 pb-20 px-6 z-10 text-center flex flex-col items-center">
+        <div className="inline-block mb-6 px-6 py-2 rounded-full border border-[var(--color-servitec-cyan)]/30 bg-[var(--color-servitec-cyan)]/10 text-[var(--color-servitec-cyan)] text-xs md:text-sm font-bold tracking-[0.3em] uppercase backdrop-blur-md">
+          ARQUITECTURA DE SOFTWARE
         </div>
+        
+        <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white mb-8 leading-tight max-w-4xl">
+          SOLUCIONES DIGITALES <br className="hidden md:block" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-servitec-cyan)] to-blue-500">
+            A LA MEDIDA
+          </span>
+        </h1>
+        
+        <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-12">
+          No solo somos programadores; somos arquitectos tecnológicos. Construimos herramientas digitales potentes para escalar tu negocio sin límites.
+        </p>
+      </section>
 
-      </div>
-
-      {/* Sección de Productos */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-bold text-center mb-16 uppercase tracking-widest">Nuestros <span className="text-[var(--color-servitec-cyan)]">Productos</span></h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {productos.map((prod, i) => (
-            <div key={i} className="group bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-3xl p-8 hover:border-[var(--color-servitec-cyan)]/50 transition-all duration-500 shadow-xl">
-              <img src={prod.img} className="w-full h-48 object-contain mb-8 group-hover:scale-105 transition-transform duration-500" alt={prod.titulo} />
-              <h3 className="text-2xl font-bold mb-4">{prod.titulo}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed mb-8">{prod.desc}</p>
-              <a href={prod.link} className="block text-center py-3 rounded-xl border border-[var(--color-servitec-cyan)] text-[var(--color-servitec-cyan)] font-bold hover:bg-[var(--color-servitec-cyan)] hover:text-black transition-all">
-                LO QUIERO
-              </a>
+      {/* Grid de Soluciones */}
+      <section className="max-w-7xl mx-auto px-6 pb-32 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+          
+          {servicios.map((servicio, index) => (
+            <div 
+              key={index}
+              id={servicio.id}
+              className={`group relative rounded-[2.5rem] p-1 bg-gradient-to-b from-white/10 to-transparent hover:${servicio.bgClass} transition-all duration-500 overflow-hidden shadow-xl scroll-mt-[100px]`}
+            >
+              {/* Resplandor hover */}
+              <div className={`absolute inset-0 bg-gradient-to-br ${servicio.bgClass} to-transparent opacity-0 group-hover:opacity-100 transition-opacity blur-xl`}></div>
+              
+              <div className="relative h-full bg-[#000814] rounded-[calc(2.5rem-4px)] p-10 md:p-12 overflow-hidden flex flex-col justify-between">
+                <div>
+                  <div className="text-6xl mb-6 transform group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+                    {servicio.icono}
+                  </div>
+                  
+                  <h4 className={`text-sm font-bold uppercase tracking-[0.2em] mb-2 ${servicio.colorClass}`}>
+                    {servicio.subtitulo}
+                  </h4>
+                  
+                  <h3 className="text-3xl md:text-4xl font-black text-white mb-6 uppercase tracking-wider">
+                    {servicio.titulo}
+                  </h3>
+                  
+                  <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                    {servicio.descripcion}
+                  </p>
+                </div>
+                
+                {/* Metadatos (Tecnologías) */}
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-gray-500 font-bold mb-3">Stack Principal:</p>
+                  <div className="flex flex-wrap gap-3">
+                    {servicio.tecnologias.map((tech, idx) => (
+                      <span key={idx} className="bg-white/5 border border-white/10 px-3 py-1 rounded-md text-xs text-gray-300">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           ))}
+
+        </div>
+      </section>
+
+      {/* Call To Action */}
+      <section className="border-y border-white/5 bg-[#000814] py-24 relative z-10">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-6 leading-tight">
+            ¿LISTO PARA MODERNIZAR <br className="hidden md:block"/> TU EMPRESA?
+          </h2>
+          <p className="text-xl text-gray-400 mb-10">
+            Cuéntanos de tu visión. Transformaremos tus ideas en un producto de software excepcional.
+          </p>
+          <Link 
+            href="/contacto" 
+            className="inline-flex items-center gap-3 px-10 py-5 bg-[var(--color-servitec-cyan)] text-black font-black uppercase tracking-widest rounded-2xl hover:bg-white hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(76,253,253,0.3)]"
+          >
+            Cotizar Tu Proyecto
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </Link>
         </div>
       </section>
 

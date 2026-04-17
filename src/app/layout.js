@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
+import WhatsApp from "./components/WhatsApp";
 
 // Mantenemos la fuente que elegiste
 const inter = Inter({ subsets: ['latin'] });
@@ -11,22 +12,22 @@ export const metadata = {
 
   title: {
     template: '%s | SERVITEC',
-    default: 'SERVITEC | Desarrollo Web y Seguridad - Al siguiente nivel',
+    default: 'SERVITEC | Agencia de Desarrollo Web y Software a la Medida',
     icons: {
       icon: "/favicon.ico",
     },
   },
-  description: 'Soluciones tecnológicas integrales en Tonalá, Chiapas. Expertos en desarrollo web a la medida, tiendas virtuales, cámaras de seguridad (CCTV) y sistemas de alarmas.',
+  description: 'Agencia de desarrollo web y software en Tonalá, Chiapas. Expertos en páginas web a la medida, tiendas virtuales, aplicaciones SaaS y plataformas escalables.',
   keywords: [
-    'desarrollo web', 'páginas web', 'tiendas virtuales', 'cámaras de seguridad', 
-    'CCTV', 'alarmas', 'seguridad electrónica', 'Tonalá', 'Chiapas', 'agencia de tecnología'
+    'desarrollo web', 'páginas web', 'tiendas virtuales', 'sistemas web', 
+    'software a la medida', 'Next.js', 'aplicaciones web', 'Tonalá', 'Chiapas', 'agencia de tecnología'
   ],
   authors: [{ name: 'SERVITEC' }],
   creator: 'SERVITEC',
   // Open Graph para WhatsApp, Facebook, LinkedIn
   openGraph: {
-    title: 'SERVITEC | Tecnología que protege y conecta',
-    description: 'Transformamos tu negocio con desarrollo web moderno y blindamos tu patrimonio con seguridad electrónica de primer nivel en Tonalá.',
+    title: 'SERVITEC | Expertos en Desarrollo de Software',
+    description: 'Transformamos e impulsamos tu negocio en el mundo digital con desarrollo web moderno, arquitectura cloud y diseño UX/UI de primer nivel.',
     url: 'https://servitec-tonala.vercel.app/', // Cambia esto cuando tengas tu dominio final
     siteName: 'SERVITEC',
     images: [
@@ -49,6 +50,7 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className} bg-black text-white antialiased`}>
         {/* Si más adelante usamos el AppProvider de Recoil, lo envolveremos aquí */}
         {children}
+        <WhatsApp />
         <Footer />
       </body>
     </html>

@@ -15,12 +15,7 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
-    {
-      url: `${baseUrl}/seguridad`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
+
     {
       url: `${baseUrl}/proyectos`,
       lastModified: new Date(),

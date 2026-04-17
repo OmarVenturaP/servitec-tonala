@@ -6,6 +6,10 @@
   --color-servitec-card: rgba(255, 255, 255, 0.08);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-servitec-dark);
   color: #ffffff;

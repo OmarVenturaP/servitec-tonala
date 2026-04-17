@@ -9,10 +9,10 @@ const services = [
     link: "/desarrollo",
   },
   {
-    title: "Sistemas de Seguridad",
-    description: "Invertir en tu seguridad es clave para tu tranquilidad y la de tu familia.",
-    image: "https://res.cloudinary.com/dzgqpqv9f/image/upload/v1701464342/cam_gdke6j.png",
-    link: "/seguridad",
+    title: "Software a la Medida",
+    description: "Interfaces y sistemas de alto impacto para organizar y escalar tu empresa.",
+    image: "https://res.cloudinary.com/dzgqpqv9f/image/upload/v1702962957/favicon_wnbflj.png",
+    link: "/desarrollo",
   },
   {
     title: "Portfolio de Proyectos",
