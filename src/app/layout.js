@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "./components/Footer";
 import WhatsApp from "./components/WhatsApp";
+import AIChatWidget from "./components/AIChatWidget";
 
 // Mantenemos la fuente que elegiste
 const inter = Inter({ subsets: ['latin'] });
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
         {/* Si más adelante usamos el AppProvider de Recoil, lo envolveremos aquí */}
         {children}
         <WhatsApp />
+        <AIChatWidget />
         <Footer />
       </body>
     </html>
